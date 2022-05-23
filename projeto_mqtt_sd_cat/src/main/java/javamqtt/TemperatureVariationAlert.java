@@ -10,6 +10,7 @@ public class TemperatureVariationAlert {
     } 
 
     public void SendAlert(String message){
+        System.out.println("ENVIANDO ALERTA!!");
         _mqtt.publish("sensor/alert/temperatura-variando", message.getBytes(), 0);;
     }
 }
